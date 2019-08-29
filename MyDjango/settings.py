@@ -47,7 +47,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'moesifdjango.middleware.moesif_middleware',
 ]
+
+MOESIF_MIDDLEWARE = {
+    'APPLICATION_ID': 'eyJhcHAiOiI0ODc6ODAiLCJ2ZXIiOiIyLjAiLCJvcmciOiIyOTE6OTkiLCJpYXQiOjE1NjcwMzY4MDB9.RwHAZHFDR28flT6OF_-cbotMYecqByR-oZTQiUul4bc',
+    'CAPTURE_OUTGOING_REQUESTS': False, # Set to True to also capture outgoing calls to 3rd parties.
+    'LOG_BODY': True,
+}
 
 ROOT_URLCONF = 'MyDjango.urls'
 

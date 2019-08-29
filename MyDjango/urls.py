@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^$', form.get_form),
     url(r'^myform$', form.get_form),
     url(r'^form$', form.submit),
+    url(r'^hello$', form.hello),
 ]

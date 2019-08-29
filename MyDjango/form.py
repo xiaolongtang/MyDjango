@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from django.shortcuts import render_to_response
 from django.shortcuts import render
 
@@ -21,3 +21,10 @@ def submit(request):
     context = {}
     context['message'] = message
     return render(request, 'index.html', context)
+
+def hello(request):
+    data = {
+        'name': 'zhangsan',
+        'age': 18,
+    }
+    return JsonResponse(data)
